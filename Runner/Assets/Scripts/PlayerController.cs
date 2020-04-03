@@ -106,13 +106,14 @@ public class PlayerController : MonoBehaviour
         {
             health = health - 1;
 
-            while(health<=50)
+            if(health<=50)
             {
                 Debug.Log("damged");
                 GameManager.damaged = true;
                 if (health <= 0)
                 {
                     Debug.Log("gameover");
+                    GameManager.damaged = false;
                     GameManager.gameover = true;
                 }
             }
