@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+		 * (Santiago Garcia II)
+		 * (Player.cs)
+		 * (Assignment 9)
+		 * (Implements state interface. This class represents the state of the context object. Each concrete state class implements a behavior associated with a state of context.)
+	*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+		 * (Santiago Garcia II)
+		 * (GameManager.cs)
+		 * (Assignment 9)
+		 * (the client, It holds the object of concrete state object that changes its state; So, State of context class object is also changed.)
+	*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

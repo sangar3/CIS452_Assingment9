@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+		 * (Santiago Garcia II)
+		 * (HurtState.cs)
+		 * (Assignment)
+		 * (One of the player health states)
+	*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
