@@ -6,16 +6,17 @@ public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
     private Vector3 direction;
-    public float forwardSpeed;
-    public float SidetoSideSpeed = 500f;
-   
+
+    public AudioClip carsfx;
     private int desiredLane = 1; //0=:left , 1::middle 2:right
     public float laneDistance = 4; // the dsitance between two lanes 
-
+    [Header("Car Stats")]
     public float jumpForce;
     public float Gravity = -20;
-    public int health = 100; 
-
+    public int health = 100;
+    public float maxSpeed;
+    public float forwardSpeed;
+    public float SidetoSideSpeed = 500f;
     void Start()
     {
        
@@ -25,16 +26,23 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if(forwardSpeed< maxSpeed) //increase speed of car
+        {
+            forwardSpeed += 0.1f * Time.deltaTime;
+        }
+      
+
         direction.z = forwardSpeed;
         //Jumping 
        
-
+        
         if(controller.isGrounded)
         {
             //direction.y = -1;
 
             if (Input.GetKeyDown("space"))
             {
+                AudioManager.Instance.PlaySFX(carsfx, 3.0f);
                 Jump();
             }
         }
@@ -46,6 +54,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
             //Debug.Log("right arrow pressed");
+            
             desiredLane++;//rightlane
             if( desiredLane == 3)
             {
@@ -56,6 +65,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            
             //Debug.Log("left arrow pressed");
             desiredLane--;//leftlane
             if (desiredLane == -1)

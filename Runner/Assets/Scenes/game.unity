@@ -131,7 +131,22 @@ PrefabInstance:
     - target: {fileID: 3991128167447522203, guid: b5878b8820302184785617d3756edd93,
         type: 3}
       propertyPath: forwardSpeed
-      value: 10
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991128167447522203, guid: b5878b8820302184785617d3756edd93,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991128167447522203, guid: b5878b8820302184785617d3756edd93,
+        type: 3}
+      propertyPath: carsfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 42d3c82999e50ae4994160bc2f6fa617, type: 3}
+    - target: {fileID: 3991128167447522203, guid: b5878b8820302184785617d3756edd93,
+        type: 3}
+      propertyPath: Gravity
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 3991743240004344855, guid: b5878b8820302184785617d3756edd93,
         type: 3}
@@ -450,7 +465,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.8392157, b: 0.8785267, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -547,12 +562,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7fc6cfab47ea9c418b2dd1efa32d792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 5
-  SidetoSideSpeed: 500
+  carsfx: {fileID: 0}
   laneDistance: 2.5
   jumpForce: 10
   Gravity: -20
   health: 100
+  maxSpeed: 0
+  forwardSpeed: 5
+  SidetoSideSpeed: 500
 --- !u!143 &710964620
 CharacterController:
   m_ObjectHideFlags: 0
